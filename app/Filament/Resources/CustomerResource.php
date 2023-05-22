@@ -97,4 +97,10 @@ class CustomerResource extends Resource
             'edit' => Pages\EditCustomer::route('/{record}/edit'),
         ];
     }    
+
+    public static function getWidgets(): array {
+        return [
+            CustomerResource\Widgets\CustomerOverview::class,
+        ];
+    }
 }
